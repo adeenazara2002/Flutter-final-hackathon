@@ -1,6 +1,25 @@
+import 'dart:async';
+import 'package:finalhackathonapplication/Screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,8 +29,8 @@ class SplashScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                'assets/images/backgroundImage.png'), 
-            fit: BoxFit.cover, 
+                'assets/images/backgroundImage.png'),
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(
@@ -22,7 +41,7 @@ class SplashScreen extends StatelessWidget {
             Row(
               children: [
                 Padding(padding: EdgeInsets.only(left: 130)),
-                Image.asset('assets/images/logo.png'),
+                Image.asset('assets/images/logo.png'), 
               ],
             ),
           ],
