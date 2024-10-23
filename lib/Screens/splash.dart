@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -28,8 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                'assets/images/backgroundImage.png'),
+            image: AssetImage('assets/images/backgroundImage.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -41,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Row(
               children: [
                 Padding(padding: EdgeInsets.only(left: 130)),
-                Image.asset('assets/images/logo.png'), 
+                Image.asset('assets/images/logo.png'),
               ],
             ),
           ],

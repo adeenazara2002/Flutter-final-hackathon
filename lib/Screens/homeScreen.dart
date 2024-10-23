@@ -21,7 +21,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         child: Column(
-          children: [],
+          children: [
+            SizedBox(height: 50,),
+            Row(
+              children: [
+                Padding(padding: EdgeInsets.only(left: 30)),
+                Icon(
+                      Icons.menu,
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      size: 30,
+                    ),
+              ],
+            )
+          ],
         ),
       ),
     );
