@@ -22,17 +22,55 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           children: [
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             Row(
               children: [
-                Padding(padding: EdgeInsets.only(left: 30)),
-                Icon(
+                Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 30)),
+                    Icon(
                       Icons.menu,
                       color: Color.fromRGBO(255, 255, 255, 1),
                       size: 30,
                     ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 15)),
+                    Text(
+                      'Details',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                        color: Color.fromRGBO(255, 255, 255, 0.6),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 130)),
+                    Image.asset('assets/images/segmentedControl.png'),
+                  ],
+                )
               ],
-            )
+            ),
+            Row(
+              children: [
+                Padding(padding: EdgeInsets.only(left: 70)),
+                Text(
+                  'Maplewood Suites',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

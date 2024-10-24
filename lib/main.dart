@@ -1,16 +1,19 @@
+import 'package:finalhackathonapplication/Screens/homeScreen.dart';
 import 'package:finalhackathonapplication/Screens/splash.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
-  runApp(const JobListing());
+  runApp(const MyApp());
 }
 
-class JobListing extends StatelessWidget {
-  const JobListing({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    );
   }
 }
