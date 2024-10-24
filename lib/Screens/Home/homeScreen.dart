@@ -141,14 +141,72 @@ class _HomeScreenState extends State<HomeScreen> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Padding(padding: EdgeInsets.only(left: 20)),
-                  CategoryContainer(imagePath: 'assets/images/burger.png'),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Column(
+                    children: [
+                      CategoryContainer(imagePath: 'assets/images/burger.png'),
+                      Padding(padding: EdgeInsets.only(top: 10)),
+                      Text(
+                        'Burgers',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
+                      ),
+                    ],
+                  ),
                   SizedBox(width: 10),
-                  CategoryContainer(imagePath: 'assets/images/cake.png'),
-                  SizedBox(width: 10),
-                  CategoryContainer(imagePath: 'assets/images/sushi.png'),
-                  SizedBox(width: 10),
-                  CategoryContainer(imagePath: 'assets/images/taco.png'),
+                  Column(
+                    children: [
+                      CategoryContainer(imagePath: 'assets/images/cake.png'),
+                      Padding(padding: EdgeInsets.only(top: 10)),
+                      Text(
+                        'Dessert',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      CategoryContainer(imagePath: 'assets/images/sushi.png'),
+                      Padding(padding: EdgeInsets.only(top: 10)),
+                      Text(
+                        'Sushi',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      CategoryContainer(imagePath: 'assets/images/taco.png'),
+                      Padding(padding: EdgeInsets.only(top: 10)),
+                      Text(
+                        'Tacos',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
