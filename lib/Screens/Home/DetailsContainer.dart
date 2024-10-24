@@ -1,10 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CategoryContainer extends StatelessWidget {
   final String imagePath;
+  final String heading;
+  final String text;
 
-  CategoryContainer({required this.imagePath});
-  
+  CategoryContainer({required this.imagePath, required this.heading , required this.text});
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -22,10 +25,10 @@ class CategoryContainer extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 8,
-              offset: Offset(2, 4),
+              color: Colors.black.withOpacity(0.2), // Adjust shadow color
+              spreadRadius: 2, // Spread of shadow
+              blurRadius: 8, // Blur effect of shadow
+              offset: Offset(2, 4), // X and Y offset of the shadow
             ),
           ],
         ),

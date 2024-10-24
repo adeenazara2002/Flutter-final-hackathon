@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Padding(padding: EdgeInsets.only(left: 15)),
                     Text(
-                      'Details',
+                      'Delivery',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
