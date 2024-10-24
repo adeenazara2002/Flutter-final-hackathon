@@ -71,6 +71,67 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 5, top: 10),
+              child: Container(
+                height: 68,
+                width: 310,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Color.fromRGBO(255, 255, 255, 0.07),
+                  ),
+                ),
+                child: TextField(
+                  // controller: _searchController,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      size: 30,
+                    ),
+                    hintText: 'Your Order?',
+                    hintStyle: TextStyle(
+                      color: Color.fromRGBO(255, 255, 255, 0.6),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: 20.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                  style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                  ),
+                ),
+              ),
+            ),
+
+            Row(
+              children: [
+                Padding(padding: EdgeInsets.only(left: 70)),
+                Text(
+                  'Categories',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                ),
+
+                Padding(padding: EdgeInsets.only(left: 70)),
+                Text(
+                  'See All',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
