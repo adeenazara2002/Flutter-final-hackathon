@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:finalhackathonapplication/Screens/Home/DetailsContainer.dart';
 import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
 import 'package:flutter/material.dart';
 
@@ -206,6 +207,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  DetailsContainer(
+                    imagePath: 'assets/images/soap.png',
+                    heading: '30% OFF',
+                    text: 'Discover Discounts in your',
+                    secondText: 'favorite local restaurants',
                   ),
                 ],
               ),
