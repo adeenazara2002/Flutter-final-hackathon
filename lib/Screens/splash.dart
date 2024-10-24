@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:finalhackathonapplication/Screens/homeScreen.dart';
+import 'package:finalhackathonapplication/Screens/Home/homeScreen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color.fromRGBO(255, 255, 255, 0.07),
+                    color: Color.fromRGBO(76, 116, 140, 1.0),
                   ),
                 ),
                 child: TextField(
@@ -108,10 +109,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
+            SizedBox(
+              height: 15,
+            ),
             Row(
               children: [
-                Padding(padding: EdgeInsets.only(left: 70)),
+                Padding(padding: EdgeInsets.only(left: 30)),
                 Text(
                   'Categories',
                   style: TextStyle(
@@ -120,8 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromRGBO(255, 255, 255, 1),
                   ),
                 ),
-
-                Padding(padding: EdgeInsets.only(left: 70)),
+                Padding(padding: EdgeInsets.only(left: 180)),
                 Text(
                   'See All',
                   style: TextStyle(
@@ -131,6 +133,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 20)),
+                  CategoryContainer(imagePath: 'assets/images/burger.png'),
+                  SizedBox(width: 10),
+                  CategoryContainer(imagePath: 'assets/images/cake.png'),
+                  SizedBox(width: 10),
+                  CategoryContainer(imagePath: 'assets/images/sushi.png'),
+                  SizedBox(width: 10),
+                  CategoryContainer(imagePath: 'assets/images/taco.png'),
+                ],
+              ),
             ),
           ],
         ),
