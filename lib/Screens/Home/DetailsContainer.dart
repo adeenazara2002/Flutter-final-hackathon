@@ -1,3 +1,4 @@
+import 'package:finalhackathonapplication/Screens/Restaurant/restaurant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,13 @@ class DetailsContainer extends StatelessWidget {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RestaurantScreen()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
                       padding: EdgeInsets.zero,

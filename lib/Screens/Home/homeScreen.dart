@@ -288,8 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         // Glass effect bottom navigation bar
         Positioned(
-          bottom:
-              -20, // Ensures the glass container is aligned just after the dish image
+          bottom: -20,
           left: 5,
           child: Container(
             width: MediaQuery.of(context).size.width,
