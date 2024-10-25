@@ -8,17 +8,6 @@ class RestaurantScreen extends StatefulWidget {
 }
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
-  @override
-  void initState() {
-    super.initState();
-
-    Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-      );
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +26,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             SizedBox(
               height: 330,
             ),
-            Row(
-              children: [
-                Padding(padding: EdgeInsets.only(left: 130)),
-                Image.asset('assets/images/logo.png'),
-              ],
-            ),
+            
           ],
         ),
       ),

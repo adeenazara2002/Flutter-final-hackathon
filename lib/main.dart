@@ -1,4 +1,5 @@
 import 'package:finalhackathonapplication/Screens/Home/homeScreen.dart';
+import 'package:finalhackathonapplication/Screens/Restaurant/restaurant.dart';
 import 'package:finalhackathonapplication/Screens/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: RestaurantScreen(),
     );
   }
 }
