@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class CategoryContainer extends StatelessWidget {
   final String imagePath;
 
-  CategoryContainer({required this.imagePath});
-  
+  CategoryContainer({required this.imagePath,});
+
   @override
   Widget build(BuildContext context) {
     return Material(
