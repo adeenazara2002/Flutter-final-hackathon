@@ -297,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Container(
               height: 80,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(53, 35, 113, 1.0).withOpacity(0.2),
+                color: Color.fromRGBO(36, 28, 100, 1.0).withOpacity(0.2),
                 borderRadius: BorderRadius.circular(25),
                 border: Border.all(
                     color: Color.fromRGBO(255, 255, 255, 0.7).withOpacity(0.4),
