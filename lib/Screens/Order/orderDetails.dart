@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ffi';
 import 'dart:ui';
 import 'package:finalhackathonapplication/Screens/Home/DetailsContainer.dart';
 import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
@@ -25,7 +26,45 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(children: []),
+        child: Column(children: [
+          SizedBox(
+            height: 60,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 10,
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MenuScreen()),
+                  );
+                },
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                'Order Details',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w700,
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                ),
+              ),
+            ],
+          ),
+        ]),
       ),
     ]));
   }
