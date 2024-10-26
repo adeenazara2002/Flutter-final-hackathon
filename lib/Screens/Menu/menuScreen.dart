@@ -1,3 +1,4 @@
+import 'package:finalhackathonapplication/Screens/Menu/checkBox.dart';
 import 'package:finalhackathonapplication/Screens/Restaurant/productItem.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -245,6 +246,85 @@ class _MenuScreenState extends State<MenuScreen> {
                     ),
                   ),
                 ),
+              ),
+            ),
+
+           Positioned(
+              bottom: 160,
+              left: 30,
+              right: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Noodle Type',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                    ),
+                  ),
+                    SizedBox(width: 120,),
+                  Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color.fromRGBO(36, 28, 100, 1.0),
+
+                      width: 1, 
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                      backgroundColor: Color.fromRGBO(11, 18, 37, 1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                    'Required',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(255, 255, 255, 0.6),
+                    ),
+                  ),
+                      ],
+                    ),
+                  ),
+                ),
+                ],
+              ),
+            ),
+
+            Positioned(
+              bottom: 140,
+              left: 30,
+              right: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'Thin',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromRGBO(255, 255, 255, 0.7),
+                        ),
+                      ),
+                      SizedBox(width: 50,),
+                      CheckBox()
+                    ],
+                  ),
+                  
+                ],
               ),
             ),
 
