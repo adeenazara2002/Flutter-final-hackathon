@@ -94,8 +94,6 @@ class ProductItem extends StatelessWidget {
                   ),
                 ),
               ),
-
-              
             ],
           ),
         ],

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 import 'package:finalhackathonapplication/Screens/Home/DetailsContainer.dart';
 import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
+import 'package:finalhackathonapplication/Screens/Menu/menuScreen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -288,57 +289,71 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         // Glass effect bottom navigation bar
         Positioned(
-          bottom: -20,
-          left: 5,
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(20),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(36, 28, 100, 1.0).withOpacity(0.2),
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(
-                    color: Color.fromRGBO(255, 255, 255, 0.7).withOpacity(0.4),
-                    width: 1),
+  bottom: -20,
+  left: 5,
+  child: Container(
+    width: MediaQuery.of(context).size.width,
+    padding: EdgeInsets.all(20),
+    child: Container(
+      height: 80,
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(36, 28, 100, 1.0).withOpacity(0.2),
+        borderRadius: BorderRadius.circular(25),
+        border: Border.all(
+          color: Color.fromRGBO(255, 255, 255, 0.7).withOpacity(0.4),
+          width: 1,
+        ),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _buildNavItem(Icons.home, "Home"),
+              _buildNavItem(Icons.search, "Browse"),
+              _buildNavItem(
+                Icons.shopping_cart,
+                "Cart",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MenuScreen()),
+                  );
+                },
               ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildNavItem(Icons.home, "Home"),
-                      _buildNavItem(Icons.search, "Browse"),
-                      _buildNavItem(Icons.shopping_cart, "Cart"),
-                      _buildNavItem(Icons.receipt, "Order"),
-                      _buildNavItem(Icons.person, "Account"),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+              _buildNavItem(Icons.receipt, "Order"),
+              _buildNavItem(Icons.person, "Account"),
+            ],
           ),
         ),
+      ),
+    ),
+  ),
+),
+
       ]),
     );
   }
 
   // Helper method to build each navigation item
-  Widget _buildNavItem(IconData icon, String label) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon, color: Color.fromRGBO(255, 255, 255, 0.7), size: 25),
-        Text(
-          label,
-          style: TextStyle(
-            color: Color.fromRGBO(255, 255, 255, 0.7),
-            fontSize: 12,
+  Widget _buildNavItem(IconData icon, String label, {VoidCallback? onTap}) {
+    return GestureDetector(
+      onTap: onTap ?? () {},
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: Color.fromRGBO(255, 255, 255, 0.7), size: 25),
+          Text(
+            label,
+            style: TextStyle(
+              color: Color.fromRGBO(255, 255, 255, 0.7),
+              fontSize: 12,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
