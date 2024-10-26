@@ -3,16 +3,16 @@ import 'dart:ffi';
 import 'dart:ui';
 import 'package:finalhackathonapplication/Screens/Home/DetailsContainer.dart';
 import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
+import 'package:finalhackathonapplication/Screens/Location/location.dart';
 import 'package:finalhackathonapplication/Screens/Menu/menuScreen.dart';
 import 'package:finalhackathonapplication/Screens/Order/bottomNavigation.dart';
 import 'package:finalhackathonapplication/Screens/Order/orderDetails.dart';
 import 'package:finalhackathonapplication/Screens/Order/orderWidget.dart';
-import 'package:finalhackathonapplication/Screens/Track/trackOrder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class LocationScreen extends StatelessWidget {
+class TrackOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class LocationScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => OrderDetailsScreen()),
+                              builder: (context) => LocationScreen()),
                         );
                       },
                     ),
@@ -51,7 +51,7 @@ class LocationScreen extends StatelessWidget {
                     width: 20,
                   ),
                   Text(
-                    'Find Location',
+                    'Track Order',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w700,
@@ -59,53 +59,132 @@ class LocationScreen extends StatelessWidget {
                     ),
                   ),
                 ]),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Container(
-                    height: 55,
-                    width: 310,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Color.fromRGBO(76, 116, 140, 1.0),
-                      ),
-                    ),
-                    child: TextField(
-                      // controller: _searchController,
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.search,
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          size: 25,
-                        ),
-                        hintText: 'Find your location',
-                        hintStyle: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(
-                          vertical: 20.0,
-                          horizontal: 20.0,
-                        ),
-                      ),
-                      style: TextStyle(
-                        color: Color.fromRGBO(255, 255, 255, 1),
-                      ),
+                SizedBox(height: 10),
+                Row(children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Order ID: 4544667788',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
                     ),
                   ),
+                  SizedBox(
+                    width: 130,
+                  ),
+                  Text(
+                    'Today',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ]),
+                SizedBox(
+                  height: 20,
                 ),
-                SizedBox(height: 10),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 22,
-                    ),
-                    Image.asset(
-                      'assets/images/Map.png',
-                    ),
-                  ],
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // Left Column of Texts
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '4:30pm',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            '4:30pm',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            '4:30pm',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            '4:30pm',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      // Center Image
+                      Image.asset(
+                        'assets/images/balls.png',
+                      ),
+
+                      // Right Column of Texts
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Confirmed',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Processing',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'On the way',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Delievered',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 90,
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 35),
@@ -113,10 +192,9 @@ class LocationScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(30, 32, 83, 1.0),
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10), // More rounded top corners
+                      topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
-                      bottomLeft:
-                          Radius.circular(10), // Less rounded bottom corners
+                      bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10),
                     ),
                   ),
@@ -127,7 +205,7 @@ class LocationScreen extends StatelessWidget {
                         children: [
                           //
                           Text(
-                            'Your Location',
+                            'Mr kamples',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -138,12 +216,8 @@ class LocationScreen extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          IconButton(
-                            icon: Icon(Icons.location_on, color: Colors.white),
-                            onPressed: () {},
-                          ),
                           Text(
-                            'Manchester , kentucky 37658',
+                            '25 minutes on the way',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
@@ -160,7 +234,7 @@ class LocationScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TrackOrderScreen()),
+                                builder: (context) => LocationScreen()),
                           );
                         },
                         style: ElevatedButton.styleFrom(
@@ -187,7 +261,7 @@ class LocationScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 80.0, vertical: 12.0),
                           child: Text(
-                            'Checkout',
+                            'Call',
                             style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.w800,
