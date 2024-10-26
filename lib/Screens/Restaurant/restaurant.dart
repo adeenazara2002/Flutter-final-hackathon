@@ -8,6 +8,14 @@ class RestaurantScreen extends StatefulWidget {
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
   @override
+  int _selectedIndex = 0; // To track the selected item
+
+  void _onItemTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -147,7 +155,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             Positioned(
               bottom: 240,
               left: 20,
-              // right: 20,
               child: Align(
                 child: ElevatedButton(
                   onPressed: () {},
@@ -208,8 +215,53 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ),
               ),
             ),
+
+            Positioned(
+              bottom: 200,
+              left: 20,
+              right: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(Icons.search, color: Colors.white),
+                  SizedBox(width: 10),
+                  _buildSelectableText("Featured Items", 0),
+                  SizedBox(width: 30),
+                  _buildSelectableText("Sushi", 1),
+                  SizedBox(width: 30),
+                  _buildSelectableText("Burgers", 2),
+                ],
+              ),
+            )
           ],
         ),
+      ),
+    );
+  }
+
+  // Helper widget to create selectable text items
+  Widget _buildSelectableText(String text, int index) {
+    return GestureDetector(
+      onTap: () => _onItemTap(index),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 15,
+              color: _selectedIndex == index ? Colors.white : Colors.white,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          if (_selectedIndex == index)
+            Container(
+              height: 1,
+              width: 100,
+              color: Colors.blue,
+              margin: EdgeInsets.only(top: 5),
+            ),
+        ],
       ),
     );
   }
