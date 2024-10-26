@@ -1,3 +1,4 @@
+import 'package:finalhackathonapplication/Screens/Restaurant/productItem.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -224,16 +225,60 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Icon(Icons.search, color: Colors.white),
-                  SizedBox(width: 10),
+                  SizedBox(width: 20),
                   _buildSelectableText("Featured Items", 0),
-                  SizedBox(width: 30),
+                  SizedBox(width: 35),
                   _buildSelectableText("Sushi", 1),
-                  SizedBox(width: 30),
+                  SizedBox(width: 35),
                   _buildSelectableText("Burgers", 2),
                 ],
               ),
-            )
-          ],
+            ),
+
+             Positioned(
+              bottom: 160,
+              left: 30,
+              right: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                   Text(
+            'Featured Items',
+            style: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.w500,
+              color: Color.fromRGBO(255, 255, 255, 1),
+            ),
+          ),
+                ],
+              ),
+            ),
+Positioned(
+  bottom: 0,
+  left: 20,
+  right: 20,
+  child: Column(
+    children: [
+      ProductItem(
+        imagePath: 'assets/images/soupBowl.png',
+        title: 'Soup Bowl',
+        subtitle: 'Delicious soup',
+        price: '\$9.99',
+      ),
+      // SizedBox(height: 10),
+      // ProductItem(
+      //   imagePath: 'assets/images/soupBowl.png',
+      //   title: 'Another Item',
+      //   subtitle: 'Tasty meal',
+      //   price: '\$12.99',
+      // ),
+      // Add more ProductItems as needed
+    ],
+  ),
+),
+
+                       ],
+                       
         ),
       ),
     );
