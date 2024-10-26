@@ -58,13 +58,13 @@ class _SignUpState extends State<SignUp> {
       // resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: Color.fromRGBO(255, 255, 255, 1),
+          // width: MediaQuery.of(context).size.width,
+          // height: MediaQuery.of(context).size.height,
+          // color: Color.fromRGBO(255, 255, 255, 1),
           child: Stack(
             children: [
               // === Pink Background Image ===
-              Image.asset('assets/images/pinkPart.png'),
+              Image.asset('assets/images/backgroundImage.png'),
 
               // === Foodie Image ===
               Positioned(
@@ -72,7 +72,7 @@ class _SignUpState extends State<SignUp> {
                 left: 0,
                 right: 0,
                 child: Center(
-                  child: Image.asset('assets/images/foodieWhite.png'),
+                  child: Image.asset('assets/images/logo.png'),
                 ),
               ),
 
@@ -100,14 +100,16 @@ class _SignUpState extends State<SignUp> {
                   width: 300,
                   height: 360,
                   decoration: BoxDecoration(
-                    color: AppColors.screenColor,
+                    color: Color.fromRGBO(29, 16, 45, 1),
+                    
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: AppColors.screenColor,
+                    color: Color.fromRGBO(29, 16, 45, 1),
+                      
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.25),
+                    color: Color.fromRGBO(29, 16, 45, 1).withOpacity(0.25),
                         blurRadius: 8,
                         offset: Offset(0, 4),
                       ),
@@ -123,7 +125,8 @@ class _SignUpState extends State<SignUp> {
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 25,
-                            color: AppColors.headingColor),
+                            color: Color.fromRGBO(255, 255, 255, 1)),
+                          
                       ),
 
                       // textfield1
@@ -133,10 +136,12 @@ class _SignUpState extends State<SignUp> {
                         width: 260,
                         margin: EdgeInsets.only(top: 10),
                         decoration: BoxDecoration(
-                          color: AppColors.textFieldColor,
+                            // color: Color.fromRGBO(255, 255, 255, 1),
+                          
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: AppColors.textFieldColor,
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            
                           ),
                         ),
                         child: TextField(
@@ -144,13 +149,15 @@ class _SignUpState extends State<SignUp> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.person,
-                              color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              
                               size: 20,
                             ),
                             hintText: 'Name',
                             hintStyle: TextStyle(
-                              color: AppColors.headingColor,
-                              fontFamily: 'Poppins-Regular',
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              
+                          
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                             ),
@@ -161,7 +168,8 @@ class _SignUpState extends State<SignUp> {
                             ),
                           ),
                           style: TextStyle(
-                            color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                            
                           ),
                         ),
                       ),
@@ -173,10 +181,11 @@ class _SignUpState extends State<SignUp> {
                         width: 260,
                         margin: EdgeInsets.only(top: 10),
                         decoration: BoxDecoration(
-                          color: AppColors.textFieldColor,
+                          // color: AppColors.textFieldColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: AppColors.textFieldColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                            
                           ),
                         ),
                         child: TextField(
@@ -184,13 +193,15 @@ class _SignUpState extends State<SignUp> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.email,
-                              color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              
                               size: 20,
                             ),
                             hintText: 'Email',
                             hintStyle: TextStyle(
-                              color: AppColors.headingColor,
-                              fontFamily: 'Poppins-Regular',
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              
+                          
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                             ),
@@ -201,7 +212,8 @@ class _SignUpState extends State<SignUp> {
                             ),
                           ),
                           style: TextStyle(
-                            color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                          
                           ),
                         ),
                       ),
@@ -213,10 +225,11 @@ class _SignUpState extends State<SignUp> {
                         width: 260,
                         margin: EdgeInsets.only(top: 10),
                         decoration: BoxDecoration(
-                          color: AppColors.textFieldColor,
+                          // color: AppColors.textFieldColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: AppColors.textFieldColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                            
                           ),
                         ),
                         child: TextField(
@@ -225,13 +238,14 @@ class _SignUpState extends State<SignUp> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
-                              color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                          
                               size: 20,
                             ),
                             hintText: 'Password',
                             hintStyle: TextStyle(
-                              color: AppColors.headingColor,
-                              fontFamily: 'Poppins-Regular',
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                             ),
@@ -240,7 +254,8 @@ class _SignUpState extends State<SignUp> {
                                 _passwordVisible
                                     ? Icons.visibility
                                     : Icons.visibility_off,
-                                color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                            
                                 size: 20,
                               ),
                               onPressed: () {
@@ -257,7 +272,8 @@ class _SignUpState extends State<SignUp> {
                             ),
                           ),
                           style: TextStyle(
-                            color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                          
                           ),
                         ),
                       ),
@@ -270,19 +286,35 @@ class _SignUpState extends State<SignUp> {
                       ElevatedButton(
                         onPressed: _createAccount,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.pinkColor,
-                          foregroundColor: AppColors.screenColor,
+                          elevation: 0,
+                          padding: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius: BorderRadius.circular(15.0),
                           ),
                         ),
-                        child: Padding(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromRGBO(42, 47, 117, 1.0),
+                                Color.fromRGBO(30, 32, 83, 1.0),
+                                Color.fromRGBO(55, 66, 157, 1.0),
+                                Color.fromRGBO(90, 100, 206, 1.0)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 50.0, vertical: 12.0),
+                              horizontal: 80.0, vertical: 12.0),
                           child: Text(
                             'Create Account',
                             style: TextStyle(
-                                fontSize: 17.0, fontWeight: FontWeight.w600),
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -300,7 +332,8 @@ class _SignUpState extends State<SignUp> {
                     Text(
                       'Already have an account?',
                       style: TextStyle(
-                        color: AppColors.headingColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                  
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
                       ),
@@ -319,7 +352,8 @@ class _SignUpState extends State<SignUp> {
                       child: Text(
                         'SIGNIN',
                         style: TextStyle(
-                          color: AppColors.pinkColor,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                          
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                         ),
@@ -329,21 +363,23 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
 
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 10),
-                  width: 120,
-                  height: 5,
-                  decoration: BoxDecoration(
-                    color: AppColors.headingColor,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: AppColors.headingColor,
-                    ),
-                  ),
-                ),
-              ),
+              // Align(
+              //   alignment: Alignment.bottomCenter,
+              //   child: Container(
+              //     margin: const EdgeInsets.only(bottom: 10),
+              //     width: 120,
+              //     height: 5,
+              //     decoration: BoxDecoration(
+              //                 color: Color.fromRGBO(255, 255, 255, 1),
+                  
+              //       borderRadius: BorderRadius.circular(20),
+              //       border: Border.all(
+              //                 color: Color.fromRGBO(255, 255, 255, 1),
+                    
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

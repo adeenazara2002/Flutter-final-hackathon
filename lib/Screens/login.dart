@@ -158,7 +158,7 @@ class _SignInState extends State<SignIn> {
                         width: 260,
                         margin: EdgeInsets.only(top: 10),
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 255, 255, 1),
+                          // color: Color.fromRGBO(255, 255, 255, 1),
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
                             color: Color.fromRGBO(255, 255, 255, 1),
