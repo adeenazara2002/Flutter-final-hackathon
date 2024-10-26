@@ -16,15 +16,15 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 20, 20, 71).withOpacity(0.8),
+        color: Color.fromARGB(255, 13, 13, 39).withOpacity(0.8),
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Color.fromARGB(255, 20, 20, 71).withOpacity(0.3),
-            offset: Offset(0, 6), 
+            color: Color.fromARGB(255, 13, 13, 39).withOpacity(0.3),
+            offset: Offset(0, 6),
             blurRadius: 10,
           ),
         ],
@@ -63,7 +63,6 @@ class ProductItem extends StatelessWidget {
               ),
             ],
           ),
-
           Stack(
             children: [
               ClipRRect(
@@ -79,14 +78,13 @@ class ProductItem extends StatelessWidget {
                 bottom: 19,
                 right: 12,
                 child: GestureDetector(
-                  onTap: () {
-                  },
+                  onTap: () {},
                   child: Container(
                     width: 25,
                     height: 25,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 5, 11, 21),
-                      borderRadius: BorderRadius.circular(4), 
+                      borderRadius: BorderRadius.circular(4),
                     ),
                     child: Icon(
                       Icons.add,
@@ -96,6 +94,8 @@ class ProductItem extends StatelessWidget {
                   ),
                 ),
               ),
+
+              
             ],
           ),
         ],

@@ -254,7 +254,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
             ),
             Positioned(
-              bottom: 0,
+              bottom: 10,
               left: 20,
               right: 20,
               child: Column(
@@ -274,6 +274,23 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   // ),
                   // Add more ProductItems as needed
                 ],
+              ),
+            ),
+          SizedBox(height: 10,),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 10, left: 20),
+                width: 120,
+                height: 5,
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                ),
               ),
             ),
           ],
