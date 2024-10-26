@@ -4,7 +4,6 @@ import 'package:finalhackathonapplication/Screens/Services/firebaseFunctions.dar
 import 'package:finalhackathonapplication/Screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:finalhackathonapplication/Screens/colors.dart';
 
 
 
@@ -86,7 +85,7 @@ class _SignUpState extends State<SignUp> {
                   style: TextStyle(
                     fontSize: 21,
                     fontWeight: FontWeight.w600,
-                    color: AppColors.screenColor,
+                    color: Color.fromRGBO(255, 255, 255, 1),
                   ),
                 ),
               ),

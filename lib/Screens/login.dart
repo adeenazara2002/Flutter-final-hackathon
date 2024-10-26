@@ -1,5 +1,4 @@
 import 'package:finalhackathonapplication/Screens/Home/homeScreen.dart';
-import 'package:finalhackathonapplication/Screens/colors.dart';
 import 'package:finalhackathonapplication/Screens/signUp.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
