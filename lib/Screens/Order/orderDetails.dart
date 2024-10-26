@@ -31,15 +31,14 @@ class OrderDetailsScreen extends StatelessWidget {
                   children: [
                     SizedBox(width: 10),
                     IconButton(
-  icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => MenuScreen()),
-    );
-  },
-),
-
+                      icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MenuScreen()),
+                        );
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(height: 10),
@@ -75,15 +74,17 @@ class OrderDetailsScreen extends StatelessWidget {
                     print("Item count: $count");
                   },
                 ),
-      SizedBox(height: 36,),
-                   BottomSummaryContainer(
-            subtotal: "\$25.00",
-            deliveryFee: "\$5.00",
-            total: "\$30.00",
-            onCheckout: () {
-              // Handle checkout action
-            },
-          ),
+                SizedBox(
+                  height: 36,
+                ),
+                BottomSummaryContainer(
+                  subtotal: "\$25.00",
+                  deliveryFee: "\$5.00",
+                  total: "\$30.00",
+                  onCheckout: () {
+                    // Handle checkout action
+                  },
+                ),
               ],
             ),
           ),

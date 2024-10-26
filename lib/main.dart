@@ -1,4 +1,5 @@
 import 'package:finalhackathonapplication/Screens/Home/homeScreen.dart';
+import 'package:finalhackathonapplication/Screens/Location/location.dart';
 import 'package:finalhackathonapplication/Screens/Menu/menuScreen.dart';
 import 'package:finalhackathonapplication/Screens/Order/orderDetails.dart';
 import 'package:finalhackathonapplication/Screens/Restaurant/restaurant.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrderDetailsScreen(),
+      home: LocationScreen(),
     );
   }
 }

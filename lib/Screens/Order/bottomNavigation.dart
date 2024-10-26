@@ -1,3 +1,4 @@
+import 'package:finalhackathonapplication/Screens/Location/location.dart';
 import 'package:flutter/material.dart';
 
 class BottomSummaryContainer extends StatelessWidget {
@@ -43,11 +44,11 @@ class BottomSummaryContainer extends StatelessWidget {
             SizedBox(height: 15),
              ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => OrderDetailsScreen()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LocationScreen()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
