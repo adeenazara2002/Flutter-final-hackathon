@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:finalhackathonapplication/Screens/Home/DetailsContainer.dart';
 import 'package:finalhackathonapplication/Screens/Home/categoryContainer.dart';
 import 'package:finalhackathonapplication/Screens/Menu/menuScreen.dart';
+import 'package:finalhackathonapplication/Screens/Order/bottomNavigation.dart';
 import 'package:finalhackathonapplication/Screens/Order/orderWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,11 +31,15 @@ class OrderDetailsScreen extends StatelessWidget {
                   children: [
                     SizedBox(width: 10),
                     IconButton(
-                      icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
+  icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MenuScreen()),
+    );
+  },
+),
+
                   ],
                 ),
                 SizedBox(height: 10),
@@ -70,6 +75,15 @@ class OrderDetailsScreen extends StatelessWidget {
                     print("Item count: $count");
                   },
                 ),
+      SizedBox(height: 36,),
+                   BottomSummaryContainer(
+            subtotal: "\$25.00",
+            deliveryFee: "\$5.00",
+            total: "\$30.00",
+            onCheckout: () {
+              // Handle checkout action
+            },
+          ),
               ],
             ),
           ),
