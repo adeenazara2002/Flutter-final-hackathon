@@ -54,7 +54,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ],
               ),
             ),
-            // Container
+            // Container with glass effect
             Positioned(
               top: 260,
               left: 20,
@@ -80,13 +80,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                 .withOpacity(0.2),
                             child: Row(
                               children: [
-                                SizedBox(
-                                  width: 10,
-                                ),
+                                SizedBox(width: 10),
                                 Image.asset('assets/images/star.png'),
-                                SizedBox(
-                                  width: 10,
-                                ),
+                                SizedBox(width: 10),
                                 Text(
                                   'Kinka Izakaya',
                                   style: TextStyle(
@@ -117,7 +113,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Delievery Fee',
+                                  'Delivery Fee',
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 0.6),
                                     fontSize: 13,
@@ -125,7 +121,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
-                             
                               ],
                             ),
                             Row(
@@ -139,7 +134,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
-                           
                               ],
                             ),
                           ],
@@ -150,14 +144,68 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ),
               ),
             ),
-
             Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: 50,
-                color: Colors.transparent,
+              bottom: 240,
+              left: 20,
+              // right: 20,
+              child: Align(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color.fromRGBO(42, 47, 117, 1.0),
+                              Color.fromRGBO(30, 32, 83, 1.0),
+                              Color.fromRGBO(55, 66, 157, 1.0),
+                              Color.fromRGBO(90, 100, 206, 1.0),
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            backgroundColor: Colors.transparent,
+                            shadowColor: Colors.transparent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          child: Text(
+                            'Delivery',
+                            style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 8),
+                      Text(
+                        'Take Out',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromRGBO(255, 255, 255, 0.6),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
