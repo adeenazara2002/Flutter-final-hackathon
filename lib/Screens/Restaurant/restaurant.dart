@@ -1,3 +1,4 @@
+import 'package:finalhackathonapplication/Screens/Home/homeScreen.dart';
 import 'package:finalhackathonapplication/Screens/Restaurant/productItem.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -45,7 +46,10 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Colors.white),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
                     },
                   ),
                   Row(

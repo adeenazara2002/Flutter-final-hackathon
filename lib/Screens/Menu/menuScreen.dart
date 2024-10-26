@@ -1,5 +1,7 @@
 import 'package:finalhackathonapplication/Screens/Menu/checkBox.dart';
+import 'package:finalhackathonapplication/Screens/Order/orderDetails.dart';
 import 'package:finalhackathonapplication/Screens/Restaurant/productItem.dart';
+import 'package:finalhackathonapplication/Screens/Restaurant/restaurant.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -33,7 +35,7 @@ class _MenuScreenState extends State<MenuScreen> {
           children: [
             // Deal image
             Image.asset(
-              'assets/images/deal.png',
+              'assets/images/menuImg.png',
               width: MediaQuery.of(context).size.width,
             ),
             Positioned(
@@ -44,11 +46,15 @@ class _MenuScreenState extends State<MenuScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
+  icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RestaurantScreen()),
+    );
+  },
+),
+
                   Row(
                     children: [
                       IconButton(
@@ -406,11 +412,11 @@ class _MenuScreenState extends State<MenuScreen> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => RestaurantScreen()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OrderDetailsScreen()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
