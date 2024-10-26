@@ -24,7 +24,7 @@ class ProductItem extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Color.fromARGB(255, 20, 20, 71).withOpacity(0.3),
-            offset: Offset(0, 6), // Adjust as needed for the "ubhra hua" effect
+            offset: Offset(0, 6), 
             blurRadius: 10,
           ),
         ],
@@ -32,7 +32,6 @@ class ProductItem extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Left side column with text items
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -48,26 +47,25 @@ class ProductItem extends StatelessWidget {
               Text(
                 subtitle,
                 style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white70,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
+                  color: Color.fromRGBO(255, 255, 255, 0.6),
                 ),
               ),
               SizedBox(height: 5),
               Text(
                 '\$$price',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(255, 255, 255, 1),
                 ),
               ),
             ],
           ),
 
-          // Right side image with add to cart icon
           Stack(
             children: [
-              // Product Image
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
@@ -77,20 +75,18 @@ class ProductItem extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              // Positioned + Icon for Add to Cart
               Positioned(
                 bottom: 19,
                 right: 12,
                 child: GestureDetector(
                   onTap: () {
-                    // Add to cart action
                   },
                   child: Container(
                     width: 25,
                     height: 25,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 5, 11, 21),
-                      borderRadius: BorderRadius.circular(4), // Square borders
+                      borderRadius: BorderRadius.circular(4), 
                     ),
                     child: Icon(
                       Icons.add,

@@ -235,50 +235,48 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
             ),
 
-             Positioned(
+            Positioned(
               bottom: 160,
               left: 30,
               right: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                   Text(
-            'Featured Items',
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w500,
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-          ),
+                  Text(
+                    'Featured Items',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                    ),
+                  ),
                 ],
               ),
             ),
-Positioned(
-  bottom: 0,
-  left: 20,
-  right: 20,
-  child: Column(
-    children: [
-      ProductItem(
-        imagePath: 'assets/images/soupBowl.png',
-        title: 'Soup Bowl',
-        subtitle: 'Delicious soup',
-        price: '\$9.99',
-      ),
-      // SizedBox(height: 10),
-      // ProductItem(
-      //   imagePath: 'assets/images/soupBowl.png',
-      //   title: 'Another Item',
-      //   subtitle: 'Tasty meal',
-      //   price: '\$12.99',
-      // ),
-      // Add more ProductItems as needed
-    ],
-  ),
-),
-
-                       ],
-                       
+            Positioned(
+              bottom: 0,
+              left: 20,
+              right: 20,
+              child: Column(
+                children: [
+                  ProductItem(
+                    imagePath: 'assets/images/soupBowl.png',
+                    title: 'Soup Bowl',
+                    subtitle: 'Delicious soup',
+                    price: '\$9.99',
+                  ),
+                  // SizedBox(height: 10),
+                  // ProductItem(
+                  //   imagePath: 'assets/images/soupBowl.png',
+                  //   title: 'Another Item',
+                  //   subtitle: 'Tasty meal',
+                  //   price: '\$12.99',
+                  // ),
+                  // Add more ProductItems as needed
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
