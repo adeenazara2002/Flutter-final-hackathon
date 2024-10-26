@@ -199,15 +199,14 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             Positioned(
-              bottom: 220,
+              bottom: 230,
               left: 20,
               child: Align(
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Color.fromRGBO(36, 28, 100, 1.0),
-
-                      width: 1, 
+                      width: 1,
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -215,7 +214,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       backgroundColor: Color.fromRGBO(11, 18, 37, 1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -249,8 +248,8 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
 
-           Positioned(
-              bottom: 160,
+            Positioned(
+              bottom: 180,
               left: 30,
               right: 20,
               child: Row(
@@ -264,66 +263,188 @@ class _MenuScreenState extends State<MenuScreen> {
                       color: Color.fromRGBO(255, 255, 255, 1),
                     ),
                   ),
-                    SizedBox(width: 120,),
-                  Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color.fromRGBO(36, 28, 100, 1.0),
-
-                      width: 1, 
-                    ),
-                    borderRadius: BorderRadius.circular(10),
+                  SizedBox(
+                    width: 120,
                   ),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                      backgroundColor: Color.fromRGBO(11, 18, 37, 1),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Color.fromRGBO(36, 28, 100, 1.0),
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                        backgroundColor: Color.fromRGBO(11, 18, 37, 1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Required',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(255, 255, 255, 0.6),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        Text(
-                    'Required',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromRGBO(255, 255, 255, 0.6),
-                    ),
                   ),
-                      ],
-                    ),
+                ],
+              ),
+            ),
+            Positioned(
+              bottom: 140,
+              left: 30,
+              right: 20,
+              // top: 620,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Thin',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(255, 255, 255, 0.7),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 220,
+                          ),
+                          CheckBox()
+                        ],
+                      ),
+                    ],
                   ),
-                ),
                 ],
               ),
             ),
 
             Positioned(
-              bottom: 140,
+              bottom: 110,
               left: 30,
               right: 20,
+              // top: 620,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Row(
+                  Column(
                     children: [
-                      Text(
-                        'Thin',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromRGBO(255, 255, 255, 0.7),
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            'Thick',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(255, 255, 255, 0.7),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 213,
+                          ),
+                          CheckBox()
+                        ],
                       ),
-                      SizedBox(width: 50,),
-                      CheckBox()
                     ],
                   ),
-                  
+                ],
+              ),
+            ),
+
+            Positioned(
+              bottom: 80,
+              left: 30,
+              right: 20,
+              // top: 620,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Udon',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(255, 255, 255, 0.7),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 215,
+                          ),
+                          CheckBox()
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            Positioned(
+              bottom: 20,
+              left: 50,
+              right: 20,
+              // top: 620,
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => RestaurantScreen()),
+                      // );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      padding: EdgeInsets.zero,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromRGBO(42, 47, 117, 1.0),
+                            Color.fromRGBO(30, 32, 83, 1.0),
+                            Color.fromRGBO(55, 66, 157, 1.0),
+                            Color.fromRGBO(90, 100, 206, 1.0)
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 80.0, vertical: 12.0),
+                      child: Text(
+                        'Add to Basket',
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
