@@ -161,7 +161,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                    backgroundColor: Colors.black,
+                    backgroundColor: Color.fromRGBO(11, 18, 37, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

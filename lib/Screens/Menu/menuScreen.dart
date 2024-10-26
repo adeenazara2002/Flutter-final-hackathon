@@ -69,7 +69,7 @@ class _MenuScreenState extends State<MenuScreen> {
               left: 20,
               right: 20,
               child: Container(
-                height: 180,
+                height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.transparent,
@@ -87,18 +87,36 @@ class _MenuScreenState extends State<MenuScreen> {
                           child: Container(
                             color: Color.fromRGBO(20, 20, 71, 1.0)
                                 .withOpacity(0.2),
-                            child: Row(
+                            child: Column(
                               children: [
-                                SizedBox(width: 10),
-                                Image.asset('assets/images/star.png'),
-                                SizedBox(width: 10),
-                                Text(
-                                  'Kinka Izakaya',
-                                  style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color.fromRGBO(255, 255, 255, 1),
-                                  ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  children: [
+                                    SizedBox(width: 15),
+                                    Text(
+                                      'Udon Miso',
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(255, 255, 255, 1),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    SizedBox(width: 15),
+                                    Text(
+                                      '16.00',
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(255, 255, 255, 1),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
@@ -108,7 +126,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     ),
                     // Bottom part with dark blue color and text
                     Container(
-                      height: 80,
+                      height: 120,
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(11, 18, 37, 1),
                         borderRadius:
@@ -122,10 +140,10 @@ class _MenuScreenState extends State<MenuScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Delivery Fee',
+                                  'Our Udon Miso is a comforting bowl',
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 0.6),
-                                    fontSize: 13,
+                                    fontSize: 17,
                                     fontWeight: FontWeight.w400,
                                   ),
                                   textAlign: TextAlign.center,
@@ -135,10 +153,36 @@ class _MenuScreenState extends State<MenuScreen> {
                             Row(
                               children: [
                                 Text(
-                                  '3.99',
+                                  'thick handmade Udon noodles rich in',
                                   style: TextStyle(
-                                    color: Color.fromRGBO(255, 255, 255, 1),
-                                    fontSize: 15,
+                                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  'misco broth garnished with tofu,',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  'onions and vegetables.',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                                    fontSize: 17,
                                     fontWeight: FontWeight.w400,
                                   ),
                                   textAlign: TextAlign.center,
@@ -154,31 +198,53 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             Positioned(
-              bottom: 240,
+              bottom: 220,
               left: 20,
               child: Align(
-                child: ElevatedButton(
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color.fromRGBO(36, 28, 100, 1.0),
+
+                      width: 1, 
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       padding:
                           EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color.fromRGBO(11, 18, 37, 1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                     child: Row(
                       children: [
+                        IconButton(
+                          icon: Icon(Icons.minimize,
+                              color: Color.fromRGBO(255, 255, 255, 0.6)),
+                          onPressed: () {},
+                        ),
                         Text(
-                          'Take Out',
+                          '1',
                           style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromRGBO(255, 255, 255, 0.6),
-                            fontWeight: FontWeight.w500,
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.center,
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.add,
+                              color: Color.fromRGBO(255, 255, 255, 1)),
+                          onPressed: () {},
                         ),
                       ],
-                    )),
+                    ),
+                  ),
+                ),
               ),
             ),
 
@@ -199,33 +265,6 @@ class _MenuScreenState extends State<MenuScreen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  // Helper widget to create selectable text items
-  Widget _buildSelectableText(String text, int index) {
-    return GestureDetector(
-      onTap: () => _onItemTap(index),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 15,
-              color: _selectedIndex == index ? Colors.white : Colors.white,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          if (_selectedIndex == index)
-            Container(
-              height: 1,
-              width: 100,
-              color: Colors.blue,
-              margin: EdgeInsets.only(top: 5),
-            ),
-        ],
       ),
     );
   }
